@@ -28,3 +28,17 @@ ansible_ssh_user = centos
 private_key_file = ~/.ssh/id_rsa
 ansible_ssh_common_args= -o StrictHostKeyChecking=no -o ProxyCommand="ssh -q centos@3.14.244.129 -W %h:%p"
 ```
+### This one works too but in one conditions, copy ssh key from ansible server to bastion , then create another ssh key in bastion then copy it other servers
+```
+
+[nodes]
+172.31.5.117
+172.31.7.75
+172.31.10.162
+172.31.12.130
+
+[nodes:vars]
+ansible_port = 22
+ansible_ssh_user = centos
+ansible_ssh_common_args= -o StrictHostKeyChecking=no -o ProxyCommand="ssh -q centos@3.14.244.129 -W %h:%p"
+```
