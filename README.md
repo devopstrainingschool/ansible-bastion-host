@@ -14,3 +14,17 @@ private_key_file = ~/.ssh/id_rsa       # key to connect to the bastion( in ansib
 ansible_ssh_common_args= -o StrictHostKeyChecking=no -o ProxyCommand="ssh -q centos@3.14.244.129 -i ~/.ssh/id_rsa -W %h:%p"
 ```
 #### ansible_ssh_common_args= -o StrictHostKeyChecking=no -o ProxyCommand="ssh -q bastionuser@bastionip -i ~/.ssh/id_rsa(inside the batsion) -W %h:%p"
+## This one works too
+```
+
+[nodes]
+172.31.5.117
+172.31.10.162
+172.31.12.130
+
+[nodes:vars]
+ansible_port = 22
+ansible_ssh_user = centos
+private_key_file = ~/.ssh/id_rsa
+ansible_ssh_common_args= -o StrictHostKeyChecking=no -o ProxyCommand="ssh -q centos@3.14.244.129 -W %h:%p"
+```
