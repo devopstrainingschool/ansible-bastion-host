@@ -8,6 +8,7 @@ Go to aws create key pair and click on import and paste the ssh key public
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2qjsWddGR1/aE70jc3ctrFN91736rJzSsNkMaFGywl/QmTmY/PE1qugHnmWM74JDceOSM8DPiSDHmE2ck0CEsvz3sneinsHe9eohmUXJ4K1MG/5pKaLmpVGPq2BKpjpMkQRL24vGBrNB5u6KLbIJEAU4/KebcdkoKUUe4XPwR3lykWypWYDH2ak2hfDFaJauGApZdkTL5DUg9NidAEzV/zSRp82uWbXiVp+tsyE37Ag7lO2VZruoTUvwpGnRXiQr4WX753evvhopGwwwRNxToLhCvFgOPF3vMVHkIp3OKFl8Jj5r/7fcFNCRAntbrSKXpxXJt5SXcr/KtORiLCfbv root@50-116-21-67.ip.linodeusercontent.com
 Use this key for the bastion
 Create a ssh key in the bastion host and do the same as above but this time the key pair will be used by remotes hosts.
+SSH to each remote server from the bastion
 Run this on bastion and ansible host:  exec ssh-agent bash
 
 ```
