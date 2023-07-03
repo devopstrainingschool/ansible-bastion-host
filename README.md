@@ -1,5 +1,6 @@
 # ansible-bastion-host
 ```
+On ansible host:
 Create ssh keygen
 Cat ~/.ssh/id_rsa.pub
 
