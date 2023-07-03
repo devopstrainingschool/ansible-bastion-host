@@ -42,3 +42,5 @@ ansible_port = 22
 ansible_ssh_user = centos
 ansible_ssh_common_args= -o StrictHostKeyChecking=no -o ProxyCommand="ssh -q centos@3.14.244.129 -W %h:%p"
 ```
+![image](https://github.com/devopstrainingschool/ansible-bastion-host/assets/107158398/f957c078-9b83-4020-aaf7-6530558b39a5)
+
