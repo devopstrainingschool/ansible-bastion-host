@@ -13,3 +13,4 @@ ansible_ssh_user = centos  # remote servers users (not bastion)
 private_key_file = ~/.ssh/id_rsa       # key to connect to the bastion( in ansible server)
 ansible_ssh_common_args= -o StrictHostKeyChecking=no -o ProxyCommand="ssh -q centos@3.14.244.129 -i ~/.ssh/id_rsa -W %h:%p"
 ```
+#### ansible_ssh_common_args= -o StrictHostKeyChecking=no -o ProxyCommand="ssh -q bastionuser@bastionip -i ~/.ssh/id_rsa(inside the batsion) -W %h:%p"
